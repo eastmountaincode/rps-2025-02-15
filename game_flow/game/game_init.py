@@ -28,10 +28,13 @@ def game_init():
     
     while True:
         try:
-            total_rounds = int(input("Enter the total number of rounds: "))
+            total_win_rounds = int(input("How many rounds do you need to win to win the game?: "))
+            if total_win_rounds <= 0:
+                print("Total rounds must be a positive integer.")
+                continue
             break
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
     # Return initialized players and total rounds
-    return player1, player2, 3
+    return player1, player2, total_win_rounds

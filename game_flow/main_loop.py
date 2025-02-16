@@ -16,11 +16,11 @@ def main_loop():
             break
 
         # Initialize game
-        player1, player2, total_rounds = game_init()
+        player1, player2, total_win_rounds = game_init()
 
         # Display game details
-        display_start_game_details(player1, player2, total_rounds)
+        display_start_game_details(player1, player2, total_win_rounds)
 
         # Create and play game
-        game = Game(player1=player1, player2=player2, total_rounds=total_rounds)
+        game = Game(player1=player1, player2=player2, total_win_rounds=total_win_rounds)
         game.play_game()

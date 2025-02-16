@@ -1,3 +1,5 @@
+import time
+
 def display_start_game():
     print()
     print(
@@ -8,4 +10,5 @@ def display_start_game():
         "███████ ███████    ██    ███████     ██      ███████ ██   ██    ██    ██ \n"
     )
     print()
+    time.sleep(2)
 
