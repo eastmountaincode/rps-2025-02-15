@@ -48,36 +48,38 @@ class Game():
         outcome = self.outcome_mapping[player1_choice][player2_choice]
 
         if outcome == "win":
-            print(f"{self.player1.name} wins the round!")
+            print(f"<<< {self.player1.name} wins the round! >>>")
             time.sleep(1)
             self.player1.increment_wins()
         elif outcome == "lose":
-            print(f"{self.player2.name} wins the round!")
+            print(f"<<< {self.player2.name} wins the round! >>>")
             time.sleep(1)
             self.player2.increment_wins()
         else:
-            print("It's a draw!")
+            print("<<< It's a draw! >>>")
             time.sleep(1)
         self.round_number += 1
 
 
     def check_win(self):
         if self.player1.num_wins == self.total_win_rounds:
-            print(f"{self.player1.name} wins the game!\n")
+            print(f"<<<<<< {self.player1.name} wins the game! >>>>>>\n")
             time.sleep(1)
             return True
         elif self.player2.num_wins == self.total_win_rounds:
-            print(f"{self.player2.name} wins the game!\n")
+            print(f"<<<<<< {self.player2.name} wins the game! >>>>>>\n")
             time.sleep(1)
             return True
         return False
     
     def print_game_details(self):
         print(f"Player 1: {self.player1.name} - Wins: {self.player1.num_wins}")
-        time.sleep(0.5)
+        time.sleep(1)
         print(f"Player 2: {self.player2.name} - Wins: {self.player2.num_wins}")
+        time.sleep(1)
         print("=" * 80)
-        time.sleep(0.5)
+        print()
+        time.sleep(1)
 
     def play_game(self):
         display_start_game()
