@@ -7,6 +7,5 @@ def start():
     main_loop()
     display_exit()
 
-
 if __name__ == '__main__':
     start()
